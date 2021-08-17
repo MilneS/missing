@@ -51,6 +51,7 @@
   flex-direction: column;
   margin-left: 100px;
   padding: 0px;
+  position: absolute;
 }
 .aboutcontact {
   display: flex;
