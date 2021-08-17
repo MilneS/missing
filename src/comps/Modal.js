@@ -7,7 +7,7 @@ const Modal = (props) => {
   };
 
   const [modalData, setModalData] = useState({});
-const effect=useEffect(()=>{
+  useEffect(()=>{
   const button = props.clickedButton;  
   const aboutUs = {
     title: "About Us",

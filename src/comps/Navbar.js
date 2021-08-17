@@ -5,20 +5,20 @@ const Navbar = (props) => {
   const [show, setShow] = useState(false);
 
   const homecliques = () => {
-    setShow(true);
+    setShow(!show);
   };
 
   const modalOpenFunc = (e) => {
     props.showModal(true);
     props.clickedButton(e.target.id);
-    setShow(false);
+    setShow(!show);
   };
 
   return (
     <>
       <div className={classes.containernav}>
-        <div onClick={homecliques} className={classes.homecont}>
-         <div className={classes.home}><p>Home</p></div> 
+        <div  className={classes.homecont}>
+         <div className={classes.home} onClick={homecliques}><p>Home</p></div> 
         </div>
         <div className={classes.addlogincont}>
           <ul className={classes.addloginul}>
