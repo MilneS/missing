@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Search from "././comps/Search-missing";
+import Navbar from "././comps/Navbar";
+import Modal from "./comps/Modal";
+import { useState } from "react";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const showModalfunc = (open) => {
+    setShowModal(open)
+  };
+
+  const [clickedButton, setClickedButton]=useState({})
+  const clickedButtonFunc=(button)=>{
+    setClickedButton(button)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc}/>
+      {showModal && <Modal showModal={showModalfunc} clickedButton={clickedButton}/>}
+      <Search />
     </div>
   );
 }

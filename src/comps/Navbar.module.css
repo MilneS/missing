@@ -1,0 +1,64 @@
+.containernav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  color: rgba(255, 255, 255, 0.856);
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.308);
+  height: 60px;
+  padding: 0px;
+  width: 100%;
+}
+.homecont {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  height: 60px;
+  width: 30%;
+  padding-left: 6%;
+}
+.home {
+  text-align: center;
+  margin: 0px;
+  width: 90px;
+  display: flex;
+  justify-content: center;
+}
+.addlogincont {
+  width: 70%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+.addloginul {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  padding: 0px;
+}
+.addlogin {
+  display: flex;
+  list-style-type: none;
+  height: 60px;
+  width: 90px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+}
+.aboutcontactcont {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  padding: 0px;
+}
+.aboutcontact {
+  display: flex;
+  list-style-type: none;
+  height: 50px;
+  width: 90px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.308);
+  border-top: 1px solid rgba(155, 154, 154, 0.308);
+}
