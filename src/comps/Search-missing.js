@@ -12,8 +12,7 @@ const Search = (props) => {
   };
 
   // input value
-  const [inputValue, setInputValue] = useState();
-  const[clearInput, setClearInput]=useState()
+  const [inputValue, setInputValue] = useState('');
   const inputHandler = (e) => {
     let valeur =
       e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
@@ -31,7 +30,7 @@ const Search = (props) => {
     });
     setCardData(foundPeople);
     setHideTitle(true);
-    setClearInput('')
+    setInputValue('')
   };
 
   return (
@@ -50,7 +49,7 @@ const Search = (props) => {
             onChange={inputHandler}
             id="search"
             className={classes.inputstyle}
-            value={clearInput}
+            value={inputValue}
           />
           <button className={classes.formbutton}>SEARCH</button>
         </form>
