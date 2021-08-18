@@ -26,7 +26,7 @@ function App() {
         throw response;
       })
       .then((data) => {
-        const people= data.map((item, index) => {
+        const people= data.map((item) => {
           return {
             first_name: item.first_name,
             last_name: item.last_name,
