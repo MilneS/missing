@@ -28,6 +28,7 @@ function App() {
       .then((data) => {
         const people= data.map((item, index) => {
           return {
+            photo: item.photo,
             first_name: item.first_name,
             last_name: item.last_name,
             city: item.city,
@@ -41,18 +42,13 @@ function App() {
       });
   }, []);
 
-  // use api data
-  // useEffect(() => {
-  //   console.log(persons);
-  // }, [persons]);
-
   return (
     <div className="App">
       <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc} />
       {showModal && (
         <Modal showModal={showModalfunc} clickedButton={clickedButton} />
       )}
-      <Search persons={persons}/>
+      <Search people={persons}/>
     </div>
   );
 }

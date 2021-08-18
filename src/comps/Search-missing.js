@@ -1,31 +1,32 @@
 import classes from "./Search-missing.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Card from "./Missing-card";
 
 const Search = (props) => {
-  const persons = props.persons;
+  const people = props.people;
 
   // store select value
   const [optionSelected, setOptionSelected] = useState();
   const selectHandler = (e) => {
     setOptionSelected(e.target.value);
   };
-// store input value
+  // store input value
   const [inputValue, setInputValue] = useState();
   const inputHandler = (e) => {
     setInputValue(e.target.value);
   };
-  // compare api at select value with input value
+  // filter comparing api at select value with input value
+  const [cardData, setCardData] = useState([]);
   const searchHandler = (e) => {
     e.preventDefault();
-    persons.map((item, index) => {
-      if (item[optionSelected] === inputValue) {
-        console.log(item)
-        return item;
-      } else {
-        return null;
-      }
-    });
+    const foundPeople= people.filter((person) => {
+      return person[optionSelected] === inputValue;
+    });      
+
+    setCardData(foundPeople)
   };
+
+  console.log(cardData);
 
   return (
     <>
