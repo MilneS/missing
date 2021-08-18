@@ -28,11 +28,11 @@ function App() {
       .then((data) => {
         const people= data.map((item, index) => {
           return {
-            photo: item.photo,
             first_name: item.first_name,
             last_name: item.last_name,
+            age: item.age,
             city: item.city,
-            state: item.state,
+            circumstance: item.circumstance,
           };
         });
         setPersons(people);
