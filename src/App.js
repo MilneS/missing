@@ -2,6 +2,7 @@ import "./App.css";
 import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
 import Modal from "./comps/Modal";
+import NewMissing from './comps/New-missing';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -41,14 +42,16 @@ function App() {
         console.log(err);
       });
   }, []);
-
+const [showAdd,setShowAdd]=useState(true)
   return (
     <div className="App">
       <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc} />
-      {showModal && (
+      {/* {showModal && (
         <Modal showModal={showModalfunc} clickedButton={clickedButton} />
-      )}
-      <Search people={persons}/>
+      )} */}
+      {showAdd && <NewMissing/>}
+      {!showAdd && <Search people={persons}/>}
+      
     </div>
   );
 }

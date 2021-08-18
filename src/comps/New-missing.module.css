@@ -1,0 +1,22 @@
+.formdiv {
+  width: 50%;
+  border: 1px solid red;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-size: 15px;
+}
+.addForm {
+  background-color: #ffff;
+  border: 1px solid greenyellow;
+  padding: 30px;
+  margin: auto;
+  height: 50%;
+  width: 60%;
+}
+
+.itemdiv{}
+.labels{}
+.inputs{}
