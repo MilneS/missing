@@ -11,10 +11,11 @@ const Search = () => {
       <div className={classes.formcontainer}>
         <form onSubmit={searchHandler}>
           <select className={classes.formselect}>
-            <option>City</option>
-            <option>County</option>
-            <option>Name</option>
+            <option>First name</option>
+            <option>Last name</option>
             <option>Age</option>
+            <option>City</option>
+            <option>State</option>
           </select>
           <label htmlFor="search" />
           <input id="search" className={classes.inputstyle} />

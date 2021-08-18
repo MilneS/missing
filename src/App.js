@@ -15,8 +15,8 @@ function App() {
     setClickedButton(button);
   };
 
+  // fetch api
   const [persons, setPersons] = useState([]);
-
   useEffect(() => {
     fetch(process.env.REACT_APP_API)
       .then((response) => {
@@ -26,13 +26,22 @@ function App() {
         throw response;
       })
       .then((data) => {
-        setPersons(data);
+        const people= data.map((item, index) => {
+          return {
+            first_name: item.first_name,
+            last_name: item.last_name,
+            city: item.city,
+            state: item.state,
+          };
+        });console.log(people)
+        setPersons(people);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
-  
+
+  // use api data
   useEffect(() => {
     console.log(persons);
   }, [persons]);
