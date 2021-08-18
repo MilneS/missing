@@ -33,7 +33,7 @@ function App() {
             city: item.city,
             state: item.state,
           };
-        });console.log(people)
+        });
         setPersons(people);
       })
       .catch((err) => {
@@ -42,9 +42,9 @@ function App() {
   }, []);
 
   // use api data
-  useEffect(() => {
-    console.log(persons);
-  }, [persons]);
+  // useEffect(() => {
+  //   console.log(persons);
+  // }, [persons]);
 
   return (
     <div className="App">
@@ -52,7 +52,7 @@ function App() {
       {showModal && (
         <Modal showModal={showModalfunc} clickedButton={clickedButton} />
       )}
-      <Search />
+      <Search persons={persons}/>
     </div>
   );
 }
