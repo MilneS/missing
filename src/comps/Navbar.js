@@ -8,19 +8,28 @@ const Navbar = (props) => {
   const [show, setShow] = useState(false);
   const homecliques = () => {
     setShow(!show);
+    props.showAdd(false)
   };
-  const modalOpenFunc = (e) => {
-    props.showModal(true);
-    props.clickedButton(e.target.id);
-    setShow(!show);
-  };
+  const showAddFunc=()=>{
+    props.showAdd(true)
+  }
+  // const showAddFunc=()=>{
+  //   props.showAdd(false)
+  // }
+
+  // const modalOpenFunc = (e) => {
+  //   props.showModal(true);
+  //   props.clickedButton(e.target.id);
+  //   setShow(!show);
+  // };
+
 
   return (
     <>
       <div className={classes.containernav}>
         <div className={classes.homecont}>
           <div className={classes.infobtn}>
-            <p className={classes.home}>{homeIcon}</p>
+            <p className={classes.home} onClick={homecliques}>{homeIcon}</p>
             <p className={classes.info} onClick={homecliques}>
               Info
             </p>
@@ -28,7 +37,7 @@ const Navbar = (props) => {
         </div>
         <div className={classes.addlogincont}>
           <ul className={classes.addloginul}>
-            <li className={classes.addlogin}>Add</li>
+            <li onClick={showAddFunc} className={classes.addlogin}>Add</li>
             <li className={classes.addlogin}>Login</li>
           </ul>
         </div>

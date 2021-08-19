@@ -10,6 +10,10 @@ function App() {
   const showModalfunc = (open) => {
     setShowModal(open);
   };
+  const [showAdd,setShowAdd]=useState(false);
+  const showAddfunc = (open) => {
+    setShowAdd(open);
+  };
 
   const [clickedButton, setClickedButton] = useState({});
   const clickedButtonFunc = (button) => {
@@ -42,10 +46,10 @@ function App() {
         console.log(err);
       });
   }, []);
-const [showAdd,setShowAdd]=useState(true)
+
   return (
     <div className="App">
-      <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc} />
+      <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc} showAdd={showAddfunc} />
       {/* {showModal && (
         <Modal showModal={showModalfunc} clickedButton={clickedButton} />
       )} */}
