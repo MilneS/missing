@@ -7,7 +7,9 @@ const ContactForm = () => {
         <div>
           <div className={classes.formcontainer}>
             <div className={classes.divcontainer}>
-            <div className={classes.subtitle}>Send us a message via this form.</div>
+              <div className={classes.subtitle}>
+                Send us a message via this form.
+              </div>
 
               <label htmlFor="name" />
               <input
@@ -35,6 +37,11 @@ const ContactForm = () => {
                 type="text"
                 required
               />
+            </div>
+            <div className={classes.btncontainer}>
+              <button type="submit" className={classes.btn}>
+                SUBMIT
+              </button>
             </div>
           </div>
         </div>
