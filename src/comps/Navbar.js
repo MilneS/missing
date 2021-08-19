@@ -1,39 +1,61 @@
 import classes from "./Navbar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCompass } from "@fortawesome/free-solid-svg-icons";
-const homeIcon = <FontAwesomeIcon icon={faCompass} />;
+import { useEffect, useState } from "react";
 
 const Navbar = (props) => {
-  const showAddFunc = () => {
-    props.showAdd(true);
-    props.showInfo(false);
+  const [selectedBtn, setSelectedBtn] = useState("search");
+
+  const selectedBtnFunc = (e) => {
+    setSelectedBtn(e.target.id);
+    console.log(e.target.id);
   };
-  const showInfoFunc = () => {
-    props.showInfo(true);
-    props.showAdd(false);
-  };
-  const showSearchFunc = () => {
-    props.showAdd(false);
-    props.showInfo(false);
-  };
+  useEffect(()=>{  props.selectedBtnNav(selectedBtn);},[selectedBtn, props])
+
 
   return (
     <>
       <div className={classes.containernav}>
         <div className={classes.homecont}>
           <div className={classes.infobtn}>
-            <p className={classes.home} onClick={showSearchFunc}>{homeIcon}</p>
-            <p onClick={showAddFunc} className={classes.addlogin}>
+
+            <p id="search" className={`${classes.home} ${
+                selectedBtn === "search" && classes.active
+              }`} onClick={selectedBtnFunc}>
+              Home
+            </p>
+
+            <p
+              id="add"
+              onClick={selectedBtnFunc}
+              className={`${classes.addlogin} ${
+                selectedBtn === "add" && classes.active
+              }`}
+            >
               Add
             </p>
           </div>
         </div>
+
         <div className={classes.addlogincont}>
           <ul className={classes.addloginul}>
-            <li className={classes.info} onClick={showInfoFunc}>
+            <li
+              id="info"
+              onClick={selectedBtnFunc}
+              className={`${classes.info} ${
+                selectedBtn === "info" && classes.active
+              }`}
+            >
               Info
             </li>
-            <li className={classes.addlogin}>Login</li>
+
+            <li
+              id="login"
+              onClick={selectedBtnFunc}
+              className={`${classes.addlogin} ${
+                selectedBtn === "login" && classes.active
+              }`}
+            >
+              Login
+            </li>
           </ul>
         </div>
       </div>

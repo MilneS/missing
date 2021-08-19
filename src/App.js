@@ -3,18 +3,10 @@ import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
 import NewMissing from './comps/New-missing';
 import Info from './comps/Info'
+import Login from './comps/Login-missing';
 import { useState, useEffect } from "react";
 
 function App() {
-  const [showAdd,setShowAdd]=useState(false);
-  const showAddfunc = (data) => {
-    setShowAdd(data);
-  };
-  const [showInfo,setShowInfo]=useState(false);
-  const showInfofunc = (data) => {
-    setShowInfo(data);
-  };
-
   // fetch api
   const [persons, setPersons] = useState([]);
   useEffect(() => {
@@ -42,12 +34,19 @@ function App() {
       });
   }, []);
 
+
+  const [selectedBtn, setSelectedBtn] = useState("search");
+  const selectedBtnFunc=(data)=>{
+    setSelectedBtn(data)
+  }
+
   return (
     <div className="App">
-      <Navbar showAdd={showAddfunc} showInfo={showInfofunc}/>
-      {showAdd && <NewMissing/>}
-      {!showAdd &&!showInfo && <Search people={persons}/>}
-      {showInfo && <Info/>}      
+      <Navbar selectedBtnNav={selectedBtnFunc}/>
+      {selectedBtn==='search' && <Search people={persons}/>}
+      {selectedBtn==='add' && <NewMissing/>}
+      {selectedBtn==='info' && <Info/>} 
+      {selectedBtn==='login' && <Login />}     
     </div>
   );
 }
