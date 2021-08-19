@@ -37,7 +37,7 @@ const Search = (props) => {
     <>
       <div className={classes.formcontainer}>
         <form onSubmit={searchHandler}>
-          <select defaultValue="" onChange={selectHandler} className={classes.formselect}>
+          <select defaultValue="" onChange={selectHandler} className={classes.formselect} required>
             <option value="" disabled hidden>
               Select
             </option>
@@ -49,7 +49,7 @@ const Search = (props) => {
             onChange={inputHandler}
             id="search"
             className={classes.inputstyle}
-            value={inputValue}
+            value={inputValue} required
           />
           <button className={classes.formbutton}>SEARCH</button>
         </form>
