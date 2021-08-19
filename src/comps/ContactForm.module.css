@@ -1,0 +1,39 @@
+
+.formcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.divcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subtitle{
+    color: #ffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+  }
+.inputdiv {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 300px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  border: unset;
+}
+.textareadiv {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100px;
+  width: 300px;
+  margin-top: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
+  border: unset;
+}

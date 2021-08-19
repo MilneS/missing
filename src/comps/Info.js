@@ -1,16 +1,17 @@
 import classes from "./Info.module.css";
 import { useState } from "react";
+import ContactForm from './ContactForm'
 
 const Info = () => {
   // DATA OBJECT
   const aboutUs = {
     title: "About Us",
     message:
-      "Each year, people are reported as missing after running away, being forced out from homes, or being abducted for sexual, political or criminal purposes. Our website provides tools to report missing persons and comment on profiles to bring any valuable information that could help in the search for our loved ones.",
+      "Each year, people are reported as missing after running away, being forced out from homes, or being abducted for sexual, political or criminal purposes. Our website provides tools to report missing persons in order to help in the search for our loved ones.",
   };
   const contact = {
     title: "Contact",
-    message: "b",
+    message: <ContactForm/>,
   };
   const [active, setActive]=useState(true)
   const [clickedBtn, setClickedBtn] = useState(aboutUs);
