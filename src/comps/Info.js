@@ -12,24 +12,27 @@ const Info = () => {
     title: "Contact",
     message: "b",
   };
-
+  const [active, setActive]=useState(true)
   const [clickedBtn, setClickedBtn] = useState(aboutUs);
   const aboutFunc = (e) => {
+    
     setClickedBtn(aboutUs);
+    setActive(true)
   };
 
   const contactFunc = (e) => {
-    setClickedBtn(contact);
+    setClickedBtn(contact)
+    setActive(false)
   };
 
   return (
     <div className={classes.cardcontainer}>
       <div className={classes.infocard}>
         <div className={classes.titlecontainer}>
-          <div onClick={aboutFunc} className={classes.title} value="about">
+          <div onClick={aboutFunc} className={`${classes.title} ${active && classes.active}`} value="about">
             <p >About Us</p>
           </div>
-          <div onClick={contactFunc} className={classes.title} value="contact">
+          <div onClick={contactFunc} className={`${classes.title} ${!active && classes.active}`} value="contact">
             <p >Contact</p>
           </div>
         </div>
