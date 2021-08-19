@@ -1,23 +1,18 @@
 import "./App.css";
 import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
-import Modal from "./comps/Modal";
 import NewMissing from './comps/New-missing';
+import Info from './comps/Info'
 import { useState, useEffect } from "react";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-  const showModalfunc = (open) => {
-    setShowModal(open);
-  };
   const [showAdd,setShowAdd]=useState(false);
-  const showAddfunc = (open) => {
-    setShowAdd(open);
+  const showAddfunc = (data) => {
+    setShowAdd(data);
   };
-
-  const [clickedButton, setClickedButton] = useState({});
-  const clickedButtonFunc = (button) => {
-    setClickedButton(button);
+  const [showInfo,setShowInfo]=useState(false);
+  const showInfofunc = (data) => {
+    setShowInfo(data);
   };
 
   // fetch api
@@ -49,13 +44,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar showModal={showModalfunc} clickedButton={clickedButtonFunc} showAdd={showAddfunc} />
-      {/* {showModal && (
-        <Modal showModal={showModalfunc} clickedButton={clickedButton} />
-      )} */}
+      <Navbar showAdd={showAddfunc} showInfo={showInfofunc}/>
       {showAdd && <NewMissing/>}
-      {!showAdd && <Search people={persons}/>}
-      
+      {!showAdd &&!showInfo && <Search people={persons}/>}
+      {showInfo && <Info/>}      
     </div>
   );
 }

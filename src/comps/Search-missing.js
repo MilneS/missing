@@ -38,7 +38,7 @@ const Search = (props) => {
       <div className={classes.formcontainer}>
         <form onSubmit={searchHandler}>
           <select onChange={selectHandler} className={classes.formselect}>
-            <option value="none" selected disabled hidden>
+            <option value="none" defaultValue disabled hidden>
               Select
             </option>
             <option value="first_name">First name</option>
