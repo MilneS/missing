@@ -13,15 +13,13 @@ function App() {
   const [userLoggedin, setUserLoggedin] = useState(false);
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_API)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
+    const fetchUser=async()=>{
+    const response = await fetch(process.env.REACT_APP_API)
+        if (!response.ok) {
+          throw new Error("Something went wrong!");
         }
-        throw response;
-      })
-      .then((data) => {
-        const people = data.map((item) => {
+        const responseData = await response.json();
+        const people = responseData.map((item) => {
           return {
             first_name: item.first_name,
             last_name: item.last_name,
@@ -31,11 +29,9 @@ function App() {
           };
         });
         setPersons(people);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+      }
+      fetchUser().catch((error) => {});
+    },[])
 
   const selectedBtnFunc = (data) => {
     setSelectedBtn(data);
