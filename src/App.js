@@ -33,23 +33,33 @@ function App() {
         console.log(err);
       });
   }, []);
- 
+
   const [selectedBtn, setSelectedBtn] = useState("search");
   const selectedBtnFunc = (data) => {
     setSelectedBtn(data);
   };
 
+  const [userLoggedin, setUserLoggedin] = useState(false);
+  const userLoggedinFunc = (data) => {
+    setUserLoggedin(data);
+  };
   const addPeopleFunc = (data) => {
-    setPersons([...persons, data])
+    setPersons([...persons, data]);
   };
 
   return (
     <div className="App">
-      <Navbar selectedBtnNav={selectedBtnFunc} />
+      <Navbar selectedBtnNav={selectedBtnFunc} userLoggedin={userLoggedin} userLoggedinFunc={userLoggedinFunc}/>
       {selectedBtn === "search" && <Search people={persons} />}
-      {selectedBtn === "add" && <NewMissing addPeopleFunc={addPeopleFunc} />}
+      {selectedBtn === "add" && (
+        <NewMissing
+          addPeopleFunc={addPeopleFunc}
+          selectedBtn={selectedBtnFunc}
+        />
+      )}
       {selectedBtn === "info" && <Info />}
-      {selectedBtn === "login" && <Login />}
+      {selectedBtn === "login" && <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc}/> }
+      {selectedBtn === "logout" && <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc}/> }
     </div>
   );
 }

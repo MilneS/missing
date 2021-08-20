@@ -1,20 +1,21 @@
 import classes from "./New-missing.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const NewMissing = (props) => {
-
   const [formData, setFormData] = useState({});
-  useEffect(()=>{
-    console.log(formData)
-},[formData])
 
   const formDataFunc = (e) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+    setFormData({
+      ...formData,
+      [e.target.id]:
+        e.target.value.trim().charAt(0).toUpperCase() + e.target.value.slice(1),
+    });
   };
 
   const formHandler = (e) => {
     e.preventDefault();
-    props.addPeopleFunc(formData)
+    props.addPeopleFunc(formData);
+    props.selectedBtn("search");
   };
 
   return (
@@ -24,7 +25,6 @@ const NewMissing = (props) => {
           <p className={classes.formtitle}>Add a missing person.</p>
         </div>
         <div>
-          {/* FIRST NAME */}
           <div>
             <label htmlFor="first_name" />
             <input
@@ -36,7 +36,6 @@ const NewMissing = (props) => {
               required
             />
           </div>
-          {/* LAST NAME */}
           <div>
             <label htmlFor="last_name" />
             <input
@@ -48,7 +47,6 @@ const NewMissing = (props) => {
               required
             />
           </div>
-          {/* AGE */}
           <div>
             <label htmlFor="age" />
             <input
@@ -60,7 +58,6 @@ const NewMissing = (props) => {
               required
             />
           </div>
-          {/* CITY */}
           <div>
             <label htmlFor="city" />
             <input
@@ -72,7 +69,6 @@ const NewMissing = (props) => {
               required
             />
           </div>
-          {/* CIRCUMSTANCE */}
           <div>
             <label htmlFor="circumstance" />
             <textarea
@@ -84,7 +80,6 @@ const NewMissing = (props) => {
               required
             />
           </div>
-          {/* BUTTON */}
           <div className={classes.btncontainer}>
             <button type="submit" className={classes.btn}>
               Submit

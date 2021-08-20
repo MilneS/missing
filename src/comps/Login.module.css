@@ -26,6 +26,7 @@
     align-items: center;
     flex-direction: column;
     animation: fadein 1s;
+    /* border: 1px solid red; */
   }
   @keyframes fadein {
     from {
@@ -87,4 +88,10 @@
   .btn:hover{
     border: 3px solid rgba(250, 189, 109, 0.945);
   }
-  
+  .credentials{
+    text-align: left;
+    color:rgba(250, 189, 109, 0.774);
+    font-size: 15px;
+    margin:0px;
+    font-style:italic;
+  }

@@ -1,35 +1,46 @@
 import classes from "./Navbar.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Navbar = (props) => {
   const [selectedBtn, setSelectedBtn] = useState("search");
+  const loggedIn = props.userLoggedin;
+
+
 
   const selectedBtnFunc = (e) => {
     setSelectedBtn(e.target.id);
+    props.selectedBtnNav(e.target.id);
   };
-  useEffect(()=>{  props.selectedBtnNav(selectedBtn);},[selectedBtn, props])
-
+  const selectedBtnLogoutFunc = (e) => {
+    props.userLoggedinFunc(false)
+    props.selectedBtnNav(e.target.id)
+  };
 
   return (
     <>
       <div className={classes.containernav}>
         <div className={classes.homecont}>
           <div className={classes.infobtn}>
-
-            <p id="search" className={`${classes.home} ${
+            <p
+              id="search"
+              className={`${classes.home} ${
                 selectedBtn === "search" && classes.active
-              }`} onClick={selectedBtnFunc}>
+              }`}
+              onClick={selectedBtnFunc}
+            >
               Home
             </p>
-            <p
-              id="add"
-              onClick={selectedBtnFunc}
-              className={`${classes.addlogin} ${
-                selectedBtn === "add" && classes.active
-              }`}
-            >
-              Add
-            </p>
+            {loggedIn && (
+              <p
+                id="add"
+                onClick={selectedBtnFunc}
+                className={`${classes.addlogin} ${
+                  selectedBtn === "add" && classes.active
+                }`}
+              >
+                Add
+              </p>
+            )}
           </div>
         </div>
 
@@ -44,16 +55,28 @@ const Navbar = (props) => {
             >
               Info
             </li>
-
-            <li
-              id="login"
-              onClick={selectedBtnFunc}
-              className={`${classes.addlogin} ${
-                selectedBtn === "login" && classes.active
-              }`}
-            >
-              Login
-            </li>
+            {!loggedIn && (
+              <li
+                id="login"
+                onClick={selectedBtnFunc}
+                className={`${classes.addlogin} ${
+                  selectedBtn === "login" && classes.active
+                }`}
+              >
+                Login
+              </li>
+            )}
+            {loggedIn && (
+              <li
+                id="logout"
+                onClick={selectedBtnLogoutFunc}
+                className={`${classes.addlogin} ${
+                  selectedBtn === "logout" && classes.active
+                }`}
+              >
+                Logout
+              </li>
+            )}
           </ul>
         </div>
       </div>

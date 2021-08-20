@@ -56,7 +56,8 @@ const Search = (props) => {
       </div>
       {!hideTitle && (
         <div className={classes.titlecontainer}>
-          Find a missing person in California.
+          Find a missing person in California, <br/>
+          or login to add a missing person.
         </div>
       )}
       {hideTitle && (
