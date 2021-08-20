@@ -6,7 +6,6 @@ const Navbar = (props) => {
 
   const selectedBtnFunc = (e) => {
     setSelectedBtn(e.target.id);
-    console.log(e.target.id);
   };
   useEffect(()=>{  props.selectedBtnNav(selectedBtn);},[selectedBtn, props])
 

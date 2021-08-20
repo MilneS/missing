@@ -1,18 +1,34 @@
 import classes from "./New-missing.module.css";
+import { useEffect, useState } from "react";
 
-const NewMissing = () => {
+const NewMissing = (props) => {
+
+  const [formData, setFormData] = useState({});
+  useEffect(()=>{
+    console.log(formData)
+},[formData])
+
+  const formDataFunc = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
+  };
+
   const formHandler = (e) => {
     e.preventDefault();
+    props.addPeopleFunc(formData)
   };
+
   return (
     <div className={classes.formdiv}>
       <form onSubmit={formHandler} className={classes.addForm}>
-      <div ><p className={classes.formtitle}>Add a missing person.</p></div>
+        <div>
+          <p className={classes.formtitle}>Add a missing person.</p>
+        </div>
         <div>
           {/* FIRST NAME */}
           <div>
             <label htmlFor="first_name" />
             <input
+              onChange={formDataFunc}
               className={classes.inputs}
               type="text"
               placeholder="First name"
@@ -24,6 +40,7 @@ const NewMissing = () => {
           <div>
             <label htmlFor="last_name" />
             <input
+              onChange={formDataFunc}
               className={classes.inputs}
               type="text"
               placeholder="Last name"
@@ -35,6 +52,7 @@ const NewMissing = () => {
           <div>
             <label htmlFor="age" />
             <input
+              onChange={formDataFunc}
               className={classes.inputs}
               type="number"
               placeholder="Age"
@@ -46,6 +64,7 @@ const NewMissing = () => {
           <div>
             <label htmlFor="city" />
             <input
+              onChange={formDataFunc}
               className={classes.inputs}
               type="text"
               placeholder="City"
@@ -57,6 +76,7 @@ const NewMissing = () => {
           <div>
             <label htmlFor="circumstance" />
             <textarea
+              onChange={formDataFunc}
               placeholder="Circumstance"
               type="text"
               className={classes.textarea}
@@ -67,7 +87,7 @@ const NewMissing = () => {
           {/* BUTTON */}
           <div className={classes.btncontainer}>
             <button type="submit" className={classes.btn}>
-              SUBMIT
+              Submit
             </button>
           </div>
         </div>

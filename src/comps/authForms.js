@@ -6,7 +6,6 @@ const AuthForms = () => {
   const [hasAccount, setHasAccount] = useState(true);
 
 
-
   return (
       <>
       {hasAccount && <Login/>}
