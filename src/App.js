@@ -3,7 +3,7 @@ import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
 import NewMissing from './comps/New-missing';
 import Info from './comps/Info'
-import Login from './comps/Login-missing';
+import Login from './comps/authForms';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -33,7 +33,6 @@ function App() {
         console.log(err);
       });
   }, []);
-
 
   const [selectedBtn, setSelectedBtn] = useState("search");
   const selectedBtnFunc=(data)=>{

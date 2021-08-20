@@ -9,7 +9,7 @@ const Search = (props) => {
   const [optionSelected, setOptionSelected] = useState();
   const selectHandler = (e) => {
     setOptionSelected(e.target.value);
-  };
+  }; 
 
   // input value
   const [inputValue, setInputValue] = useState('');

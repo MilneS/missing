@@ -22,7 +22,6 @@ const Navbar = (props) => {
               }`} onClick={selectedBtnFunc}>
               Home
             </p>
-
             <p
               id="add"
               onClick={selectedBtnFunc}
