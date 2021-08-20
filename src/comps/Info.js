@@ -16,11 +16,9 @@ const Info = () => {
   const [active, setActive]=useState(true)
   const [clickedBtn, setClickedBtn] = useState(aboutUs);
   const aboutFunc = (e) => {
-    
     setClickedBtn(aboutUs);
     setActive(true)
   };
-
   const contactFunc = (e) => {
     setClickedBtn(contact)
     setActive(false)

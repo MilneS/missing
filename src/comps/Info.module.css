@@ -29,7 +29,6 @@
   width: 100%;
   margin-top: 0px;
   margin-bottom: 20px;
-  /* border: 1px solid red; */
 }
 .title {
   width: 110px;
@@ -44,7 +43,6 @@
   margin-left: 1px;
   margin-right: 1px;
   margin-top: 2px;
-  /* border: 1px solid red; */
 }
 .active{
   font-weight: bold;
@@ -77,5 +75,4 @@ cursor: pointer;
   color: #ffff;
   font-size: 20px;
   line-height: 35px;
-  /* border: 1px solid pink; */
 }

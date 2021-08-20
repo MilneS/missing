@@ -7,6 +7,7 @@ const Login = (props) => {
     password: "",
   };
   const [userData, setUserData] = useState(defaultdata);
+  const [enteredData, setEnteredData] = useState();
 
   // fetch
   useEffect(() => {
@@ -25,19 +26,16 @@ const Login = (props) => {
     fetchUser().catch((error) => {});
   }, []);
 
-  const [enteredData, setEnteredData] = useState();
   const enteredDataFunc = (e) => {
     setEnteredData({ ...enteredData, [e.target.id]: e.target.value.trim() });
   };
 
-  // const [userLoggedin, setUserLoggedin] = useState(false);
   const formHandler = (e) => {
     e.preventDefault();
     if (
       enteredData.email === userData.email &&
       enteredData.password === userData.password
     ) {
-      // setUserLoggedin(true);
       props.loggedinData(true);
       props.selectedBtn("search");
     }

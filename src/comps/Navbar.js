@@ -5,15 +5,13 @@ const Navbar = (props) => {
   const [selectedBtn, setSelectedBtn] = useState("search");
   const loggedIn = props.userLoggedin;
 
-
-
   const selectedBtnFunc = (e) => {
     setSelectedBtn(e.target.id);
     props.selectedBtnNav(e.target.id);
   };
   const selectedBtnLogoutFunc = (e) => {
-    props.userLoggedinFunc(false)
-    props.selectedBtnNav(e.target.id)
+    props.userLoggedinFunc(false);
+    props.selectedBtnNav(e.target.id);
   };
 
   return (
@@ -43,7 +41,6 @@ const Navbar = (props) => {
             )}
           </div>
         </div>
-
         <div className={classes.addlogincont}>
           <ul className={classes.addloginul}>
             <li

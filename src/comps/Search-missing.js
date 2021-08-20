@@ -4,15 +4,17 @@ import Card from "./Missing-card";
 
 const Search = (props) => {
   const people = props.people;
+  const [optionSelected, setOptionSelected] = useState();
+  const [inputValue, setInputValue] = useState("");
+  const [hideTitle, setHideTitle] = useState(false);
+  const [cardData, setCardData] = useState([]);
 
   // select value
-  const [optionSelected, setOptionSelected] = useState();
   const selectHandler = (e) => {
     setOptionSelected(e.target.value);
-  }; 
+  };
 
   // input value
-  const [inputValue, setInputValue] = useState('');
   const inputHandler = (e) => {
     let valeur =
       e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1);
@@ -20,9 +22,6 @@ const Search = (props) => {
   };
 
   // filter comparing api at select value with input value
-  const [hideTitle, setHideTitle] = useState(false);
-  const [cardData, setCardData] = useState([]);
-
   const searchHandler = (e) => {
     e.preventDefault();
     const foundPeople = people.filter((person) => {
@@ -30,14 +29,19 @@ const Search = (props) => {
     });
     setCardData(foundPeople);
     setHideTitle(true);
-    setInputValue('')
+    setInputValue("");
   };
 
   return (
     <>
       <div className={classes.formcontainer}>
         <form onSubmit={searchHandler}>
-          <select defaultValue="" onChange={selectHandler} className={classes.formselect} required>
+          <select
+            defaultValue=""
+            onChange={selectHandler}
+            className={classes.formselect}
+            required
+          >
             <option value="" disabled hidden>
               Select
             </option>
@@ -49,14 +53,15 @@ const Search = (props) => {
             onChange={inputHandler}
             id="search"
             className={classes.inputstyle}
-            value={inputValue} required
+            value={inputValue}
+            required
           />
           <button className={classes.formbutton}>SEARCH</button>
         </form>
       </div>
       {!hideTitle && (
         <div className={classes.titlecontainer}>
-          Find a missing person in California, <br/>
+          Find a missing person in California, <br />
           or login to add a missing person.
         </div>
       )}

@@ -34,14 +34,12 @@
   align-items: center;
   justify-content: center;
 }
-
 .addlogincont {
   width: 70%;
   height: 60px;
   display: flex;
   justify-content: flex-end;
   padding-right: 10%;
-
 }
 .addloginul {
   display: flex;
@@ -64,7 +62,6 @@
   font-weight: bold;
   cursor:pointer;
 }
-
 .active {
   font-weight: bold;
   color: rgba(255, 231, 199, 0.836);

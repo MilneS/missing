@@ -9,6 +9,9 @@ import { useState, useEffect } from "react";
 function App() {
   // fetch api
   const [persons, setPersons] = useState([]);
+  const [selectedBtn, setSelectedBtn] = useState("search");
+  const [userLoggedin, setUserLoggedin] = useState(false);
+
   useEffect(() => {
     fetch(process.env.REACT_APP_API)
       .then((response) => {
@@ -34,12 +37,9 @@ function App() {
       });
   }, []);
 
-  const [selectedBtn, setSelectedBtn] = useState("search");
   const selectedBtnFunc = (data) => {
     setSelectedBtn(data);
   };
-
-  const [userLoggedin, setUserLoggedin] = useState(false);
   const userLoggedinFunc = (data) => {
     setUserLoggedin(data);
   };
@@ -49,7 +49,11 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar selectedBtnNav={selectedBtnFunc} userLoggedin={userLoggedin} userLoggedinFunc={userLoggedinFunc}/>
+      <Navbar
+        selectedBtnNav={selectedBtnFunc}
+        userLoggedin={userLoggedin}
+        userLoggedinFunc={userLoggedinFunc}
+      />
       {selectedBtn === "search" && <Search people={persons} />}
       {selectedBtn === "add" && (
         <NewMissing
@@ -58,8 +62,12 @@ function App() {
         />
       )}
       {selectedBtn === "info" && <Info />}
-      {selectedBtn === "login" && <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc}/> }
-      {selectedBtn === "logout" && <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc}/> }
+      {selectedBtn === "login" && (
+        <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc} />
+      )}
+      {selectedBtn === "logout" && (
+        <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc} />
+      )}
     </div>
   );
 }
