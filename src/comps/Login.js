@@ -1,4 +1,4 @@
-import classes from './authForms.module.css'
+import classes from './Login.module.css'
 
 
 const Login=()=>{

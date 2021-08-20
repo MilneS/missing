@@ -3,7 +3,7 @@ import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
 import NewMissing from "./comps/New-missing";
 import Info from "./comps/Info";
-import Login from "./comps/authForms";
+import Login from "./comps/Login";
 import { useState, useEffect } from "react";
 
 function App() {
