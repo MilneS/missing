@@ -58,3 +58,10 @@
 .sentmsg {
   color: rgba(96, 238, 96, 0.829);
 }
+
+
+@media (max-width: 900px) {
+  .formcontainer {
+    width: 200px;
+  }
+}

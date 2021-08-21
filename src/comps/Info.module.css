@@ -93,8 +93,9 @@
   }
   .infocard {
     height: 550px;
-    width: 80%;}
-    .infotext {
+    width: 80%;
+  }
+  .infotext {
     font-size: 18px;
     line-height: 40px;
   }
