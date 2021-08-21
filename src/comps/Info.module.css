@@ -90,8 +90,12 @@
   .infotextcontainer {
     width: 300px;
   }
+  .infotext {
+    font-size: 15px;
+    line-height: 350px;
+  }
 }
-@media (max-width: 800px) {
+@media (max-width: 00px) {
   .infocard {
     height: 550px;
     width: 80%;
