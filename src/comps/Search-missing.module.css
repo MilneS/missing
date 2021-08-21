@@ -93,6 +93,8 @@
   align-items: center;
   overflow: scroll;
   height: 300px;
+  border:2px solid red
+
 }
 .notfoundmessage {
   width: 500px;
@@ -137,7 +139,7 @@
     font-size: 25px;
   }
   .divcardarea {
-    width: 200px;
+    width: 350px;
   }
 }
 @media (max-width: 600px) {
