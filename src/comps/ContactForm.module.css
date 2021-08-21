@@ -61,7 +61,9 @@
 
 
 @media (max-width: 900px) {
-  .formcontainer {
-    width: 200px;
+  .inputdiv, .textareadiv  {
+    width: 250px;
   }
+
+
 }
