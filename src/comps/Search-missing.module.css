@@ -82,6 +82,7 @@
   display: flex;
   animation: fadein 1s;
 }
+
 .cardarea {
   margin-left: auto;
   margin-right: auto;
@@ -93,8 +94,6 @@
   align-items: center;
   overflow: scroll;
   height: 300px;
-  border:2px solid red
-
 }
 .notfoundmessage {
   width: 500px;
@@ -132,7 +131,7 @@
     width: 80px;
   }
   .titlecontainer {
-    width: 500px;
+    width: 350px;
     height: 200px;
     line-height: 60px;
     margin-top: 30px;
@@ -140,7 +139,19 @@
   }
   .divcardarea {
     width: 350px;
+    height: 150px;
+    padding-top:20px; 
+    margin-top:20px
   }
+  .cardarea {
+    height: 200px;
+  }
+  .notfoundmessage {
+    width: 350px;
+    height: 150px;
+    font-size: 25px;
+    line-height: 40px;
+  } 
 }
 @media (max-width: 600px) {
   .formselect {
