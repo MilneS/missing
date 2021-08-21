@@ -54,10 +54,9 @@
 }
 .titlecontainer {
   width: 600px;
-  height: 200px;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
   line-height: 60px;
   margin-top: 30px;
