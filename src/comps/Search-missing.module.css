@@ -118,14 +118,17 @@
 }
 @media (max-width: 800px) {
   .formcontainer {
-    width: 350px;
+    width: 200px;
     border:1px solid red;
   }
   .formselect {
     width: 100px;
+    padding-left: 5px;
   }
   .inputstyle {
     width: 110px;
+    padding-left: 5px;
+
   }
   .formbutton {
     width: 80px;
@@ -138,7 +141,7 @@
     font-size: 25px;
   }
   .divcardarea {
-    width: 350px;
+    width: 200px;
   }
 }
 /* @media (max-width: 600px) {
