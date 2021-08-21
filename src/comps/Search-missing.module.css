@@ -119,7 +119,6 @@
 @media (max-width: 800px) {
   .formcontainer {
     width: 300px;
-    border:1px solid red;
   }
   .formselect {
     width: 80px;
@@ -142,9 +141,6 @@
   }
 }
 @media (max-width: 600px) {
-  .formcontainer {
-    width: 400px;
-  }
   .formselect {
     width: 80px;
   }
