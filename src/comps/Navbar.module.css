@@ -33,6 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .addlogincont {
   width: 70%;
@@ -65,4 +66,21 @@
 .active {
   font-weight: bold;
   color: rgba(255, 231, 199, 0.836);
+}
+
+@media(max-width:870px){
+  .homecont {
+    width: 40%;
+  }
+  .addlogincont {
+    width: 60%;
+  }
+}
+@media(max-width:870px){
+  .homecont {
+    width: 60%;
+  }
+  .addlogincont {
+    width: 40%;
+  }
 }

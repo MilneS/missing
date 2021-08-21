@@ -13,7 +13,6 @@
 .subtitle {
   color: #ffff;
   font-size: 18px;
-  margin-bottom: 10px;
   margin-bottom: 20px;
 }
 .inputdiv {
@@ -53,9 +52,9 @@
   color: rgba(0, 0, 0, 0.719);
   letter-spacing: 1px;
 }
-.btn:hover{
+.btn:hover {
   border: 3px solid rgba(250, 189, 109, 0.945);
 }
-.sentmsg{
-  color:rgba(96, 238, 96, 0.829)
+.sentmsg {
+  color: rgba(96, 238, 96, 0.829);
 }

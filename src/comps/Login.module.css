@@ -93,3 +93,13 @@ input:focus {
   margin: 0px;
   font-style: italic;
 }
+
+@media (max-width: 600px) {
+  .addForm {
+    height: 450px;
+    width: 300px;
+  }
+  .inputs {
+    width: 300px;
+  }
+}
