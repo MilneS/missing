@@ -60,9 +60,12 @@
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .inputdiv, .textareadiv  {
-    width: 250px;
+    width: 200px;
+  }
+  .formcontainer {
+    border:1px solid red
   }
 
 
