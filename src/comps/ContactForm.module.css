@@ -59,14 +59,9 @@
   color: rgba(96, 238, 96, 0.829);
 }
 
-
 @media (max-width: 800px) {
-  .inputdiv, .textareadiv  {
+  .inputdiv,
+  .textareadiv {
     width: 200px;
   }
-  .formcontainer {
-    border:1px solid red
-  }
-
-
 }

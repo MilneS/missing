@@ -118,7 +118,8 @@
 }
 @media (max-width: 800px) {
   .formcontainer {
-    width: 400px;
+    width: 350px;
+    border:1px solid red;
   }
   .formselect {
     width: 100px;
@@ -137,10 +138,10 @@
     font-size: 25px;
   }
   .divcardarea {
-    width: 400px;
+    width: 350px;
   }
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .formcontainer {
     width: 400px;
   }
@@ -160,4 +161,4 @@
     margin-top: 30px;
     font-size: 16px;
   }
-}
+} */
