@@ -142,9 +142,9 @@
   }
 }
 @media (max-width: 600px) {
-  /* .formcontainer {
+  .formcontainer {
     width: 400px;
-  } */
+  }
   .formselect {
     width: 80px;
   }
