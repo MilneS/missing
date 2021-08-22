@@ -79,10 +79,13 @@ input:focus {
 
 @media (max-width: 800px) {
   .addForm {
-    height: 450px;
-    width: 300px;
+    height: 400px;
+    width: 200px;
+  }
+  .inputs, textarea {
+    width: 200px;
   }
   .formtitle {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
