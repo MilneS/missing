@@ -69,18 +69,13 @@
 }
 
 @media(max-width:870px){
+  .infobtn {
+    padding-left: 10px;
+  }
   .homecont {
-    width: 40%;
+    width: 50%;
   }
   .addlogincont {
     width: 60%;
-  }
-}
-@media(max-width:870px){
-  .homecont {
-    width: 60%;
-  }
-  .addlogincont {
-    width: 40%;
   }
 }
