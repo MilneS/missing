@@ -37,7 +37,7 @@ const Login = (props) => {
       enteredData.password === userData.password
     ) {
       props.loggedinData(true);
-      props.selectedBtn("search");
+      props.selectedBtn("add");
     }
   };
 
