@@ -39,6 +39,7 @@ function App() {
     },[])
 
   const selectedBtnFunc = (data) => {
+    console.log(data)
     setSelectedBtn(data);
   };
   const userLoggedinFunc = (data) => {
@@ -47,11 +48,13 @@ function App() {
   const addPeopleFunc = (data) => {
     setPersons([...persons, data]);
   };
+  
 
   return (
     <div className="App">
       <Navbar
         selectedBtnNav={selectedBtnFunc}
+        selectedBtn={selectedBtn}
         userLoggedin={userLoggedin}
         userLoggedinFunc={userLoggedinFunc}
       />

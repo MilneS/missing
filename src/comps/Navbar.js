@@ -1,19 +1,17 @@
 import classes from "./Navbar.module.css";
-import { useState } from "react";
 
 const Navbar = (props) => {
-  const [selectedBtn, setSelectedBtn] = useState("search");
   const loggedIn = props.userLoggedin;
+  const selectedBtn = props.selectedBtn;
 
   const selectedBtnFunc = (e) => {
-    setSelectedBtn(e.target.id);
     props.selectedBtnNav(e.target.id);
   };
   const selectedBtnLogoutFunc = (e) => {
     props.userLoggedinFunc(false);
-    props.selectedBtnNav(e.target.id);
+    props.selectedBtnNav('login');
   };
-
+  
   return (
     <>
       <div className={classes.containernav}>
@@ -67,9 +65,7 @@ const Navbar = (props) => {
               <li
                 id="logout"
                 onClick={selectedBtnLogoutFunc}
-                className={`${classes.addlogin} ${
-                  selectedBtn === "logout" && classes.active
-                }`}
+                className={classes.addlogin}
               >
                 Logout
               </li>
