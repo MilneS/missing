@@ -24,8 +24,6 @@ function App() {
           throw new Error("Something went wrong!");
         }
         const responseData = await response.json();
-        console.log(responseData)
-
         const people = responseData.map((item) => {
           return {
             first_name: item.first_name,

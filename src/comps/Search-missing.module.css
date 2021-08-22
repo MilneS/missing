@@ -122,26 +122,30 @@
     width: 350px;
   }
   .formselect {
-    width: 80px;
+    width: 90px;
+    margin-right: 3px;
+padding-left: 4px;
   }
   .inputstyle {
-    width: 80px;
+    width: 110px;
+    padding-right:20px;
+    margin-right: 3px;
   }
   .formbutton {
     width: 80px;
   }
   .titlecontainer {
-    width: 350px;
-    height: 200px;
-    line-height: 60px;
+    width: 300px;
+    height: 100px;
+    line-height: 30px;
     margin-top: 30px;
-    font-size: 25px;
+    font-size: 16px;
   }
   .divcardarea {
     width: 350px;
     height: 150px;
     padding-top:20px; 
-    margin-top:20px
+    margin-top:20px;
   }
   .cardarea {
     height: 200px;
@@ -152,24 +156,4 @@
     font-size: 25px;
     line-height: 40px;
   } 
-}
-@media (max-width: 600px) {
-  .formselect {
-    width: 80px;
-    padding-left:20px;
-  }
-  .inputstyle {
-    width: 110px;
-    padding-right:20px;
-  }
-  .formbutton {
-    width: 70px;
-  }
-  .titlecontainer {
-    width: 300px;
-    height: 100px;
-    line-height: 30px;
-    margin-top: 30px;
-    font-size: 16px;
-  }
 }
