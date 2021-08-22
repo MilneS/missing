@@ -60,8 +60,17 @@
 }
 
 @media (max-width: 800px) {
+  .formcontainer{
+    width: 210px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
   .inputdiv,
   .textareadiv {
     width: 200px;
+  }
+  .btn {
+    margin-top: 0px;
   }
 }

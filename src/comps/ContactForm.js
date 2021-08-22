@@ -16,7 +16,7 @@ const ContactForm = () => {
             <div className={classes.formcontainer}>
               <div className={classes.divcontainer}>
                 <div className={classes.subtitle}>
-                  Send us a message via this form.
+                  Send us a message.
                 </div>
 
                 <label htmlFor="name" />
