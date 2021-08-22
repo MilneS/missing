@@ -124,11 +124,11 @@
   .formselect {
     width: 90px;
     margin-right: 3px;
-padding-left: 4px;
+    padding-left: 4px;
   }
   .inputstyle {
     width: 110px;
-    padding-right:20px;
+    padding-right: 20px;
     margin-right: 3px;
   }
   .formbutton {
@@ -142,18 +142,18 @@ padding-left: 4px;
     font-size: 16px;
   }
   .divcardarea {
-    width: 350px;
+    width: 400px;
     height: 150px;
-    padding-top:20px; 
-    margin-top:20px;
+    padding-top: 20px;
+    margin-top: 20px;
   }
   .cardarea {
-    height: 200px;
+    height: 300px;
   }
   .notfoundmessage {
     width: 350px;
     height: 150px;
     font-size: 25px;
     line-height: 40px;
-  } 
+  }
 }

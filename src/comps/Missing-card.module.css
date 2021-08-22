@@ -46,4 +46,11 @@
     height: 200px;
     width: 200px;
   }
+  .circumstance {
+    overflow: scroll;
+    height: 70px;
+    line-height: 20px;
+    background-color: rgba(78, 78, 78, 0.13);
+    padding: 8px;
+  }
 }
