@@ -82,7 +82,7 @@ const NewMissing = (props) => {
           </div>
           <div className={classes.btncontainer}>
             <button type="submit" className={classes.btn}>
-              Submit
+              SUBMIT
             </button>
           </div>
         </div>

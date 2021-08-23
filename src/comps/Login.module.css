@@ -76,11 +76,11 @@ input:focus {
   font-size: 15px;
   font-weight: bold;
   border: unset;
-  border: 4px solid rgba(134, 134, 134, 0.473);
   margin-top: 10px;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.719);
   letter-spacing: 1px;
+  background-color: #ffff;
 }
 .btn:hover {
   border: 3px solid rgba(250, 189, 109, 0.945);
@@ -93,9 +93,19 @@ input:focus {
   font-style: italic;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
+  .addForm {
+    width: 360px;
+  }
+}
+@media (max-width: 768px) {
   .addForm {
     height: 450px;
+    width: 350px;
+  }
+}
+@media (max-width: 480px) {
+  .addForm {
     width: 205px;
   }
   .inputs {

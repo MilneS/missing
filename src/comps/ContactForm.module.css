@@ -46,11 +46,12 @@
   font-size: 15px;
   font-weight: bold;
   border: unset;
-  border: 2px solid rgba(134, 134, 134, 0.473);
   margin-top: 10px;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.719);
   letter-spacing: 1px;
+  background-color: #ffff
+
 }
 .btn:hover {
   border: 3px solid rgba(250, 189, 109, 0.945);
@@ -59,7 +60,7 @@
   color: rgba(96, 238, 96, 0.829);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 480px) {
   .formcontainer{
     width: 210px;
   }

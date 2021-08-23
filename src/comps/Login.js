@@ -76,7 +76,7 @@ const Login = (props) => {
           <div className={classes.endcontainer}>
             <div className={classes.btncont}>
               <button type="submit" className={classes.btn}>
-                Connect
+                LOGIN
               </button>
             </div>
           </div>

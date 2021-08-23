@@ -81,18 +81,27 @@
   line-height: 35px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1024px) {
   .infotextcontainer {
     width: 400px;
   }
+  .infocard {
+    width: 60%;
+  }
 }
-@media (max-width: 900px) {
+
+@media (max-width: 768px) {
+  .infocard {
+    width: 85%;
+  }
+}
+@media (max-width: 480px) {
   .infotextcontainer {
-    width: 300px;
+    width: 250px;
   }
   .infocard {
     height: 550px;
-    width: 80%;
+    width: 95%;
   }
   .infotext {
     font-size: 16px;

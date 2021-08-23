@@ -33,7 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 .addlogincont {
   width: 70%;
@@ -61,14 +60,14 @@
 .info:hover,
 .addlogin:hover {
   font-weight: bold;
-  cursor:pointer;
+  cursor: pointer;
 }
 .active {
   font-weight: bold;
   color: rgba(255, 231, 199, 0.836);
 }
 
-@media(max-width:870px){
+@media (max-width: 870px) {
   .infobtn {
     padding-left: 10px;
   }
@@ -77,5 +76,12 @@
   }
   .addlogincont {
     width: 60%;
+  }
+}
+@media (max-width: 480px) {
+  .home,
+  .info {
+    margin-right: 5px;
+    width: 50px;
   }
 }

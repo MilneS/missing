@@ -41,7 +41,9 @@
   background-color: rgba(78, 78, 78, 0.13);
   padding: 8px;
 }
-@media (max-width: 800px) {
+
+
+@media (max-width: 768px) {
   .card {
     height: 200px;
     width: 200px;
