@@ -51,7 +51,6 @@
   color: rgba(0, 0, 0, 0.719);
   letter-spacing: 1px;
   background-color: #ffff
-
 }
 .btn:hover {
   border: 3px solid rgba(250, 189, 109, 0.945);
@@ -63,6 +62,7 @@
 @media (max-width: 480px) {
   .formcontainer{
     width: 210px;
+    height:fit-content;
   }
   .subtitle {
     font-size: 16px;
@@ -71,7 +71,15 @@
   .textareadiv {
     width: 200px;
   }
+  .inputdiv{
+    height: 30px;
+  }
+  .textareadiv{
+    height: 50px;
+  }
   .btn {
     margin-top: 0px;
+    height: 30px;
+    width:80px
   }
 }

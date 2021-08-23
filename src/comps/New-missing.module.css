@@ -92,13 +92,31 @@ input:focus {
   }
 }
 @media (max-width: 480px) {
-  .addForm {
+  .formdiv {
+    margin-top: 40px;
+    width: 305px;
+    align-items:flex-start;
     height: 450px;
+  }
+  .addForm {
     width: 205px;
+    height:350px;
+    margin-top:0px;
   }
   .inputs,
   textarea {
     width: 200px;
+  }
+  .inputs{
+    height: 30px;
+  }
+  .textarea{
+    height: 50px;
+  }
+  .btn {
+    margin-top: 5px;
+    height: 30px;
+    width:80px
   }
   .formtitle {
     font-size: 15px;

@@ -8,6 +8,7 @@
   height: 550px;
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  border:1px solid red
 }
 .formtitle {
   color: #ffff;
@@ -96,6 +97,7 @@ input:focus {
 @media (max-width: 1024px) {
   .addForm {
     width: 360px;
+       border:1px solid red
   }
 }
 @media (max-width: 768px) {
@@ -105,10 +107,23 @@ input:focus {
   }
 }
 @media (max-width: 480px) {
+  .formdiv {
+    margin-top: 40px;
+    width: 305px;
+    align-items:flex-start;
+    height: 450px;
+  }
   .addForm {
     width: 205px;
+    height:350px;
+    margin-top:0px;
   }
   .inputs {
     width: 200px;
+    height: 30px;
+  }
+  .btn {
+    height: 30px;
+    width:80px
   }
 }

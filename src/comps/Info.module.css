@@ -102,12 +102,15 @@
   .infocard {
     height: 550px;
     width: 305px;
+    height: 450px;
   }
   .infotext {
     font-size: 16px;
     line-height: 30px;
+    padding-top: 0px;
   }
   .titlecontainer {
     margin-bottom: 5px;
+    margin-top: 0px;
   }
 }
