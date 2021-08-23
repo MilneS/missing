@@ -5,8 +5,8 @@
 }
 .infocard {
   background-color: rgba(0, 0, 0, 0.363);
-  height: 550px;
-  width: 50%;
+  height: 545px;
+  width: 700px;
   display: flex;
   margin-top: 40px;
   flex-direction: column;
@@ -92,7 +92,7 @@
 
 @media (max-width: 768px) {
   .infocard {
-    width: 85%;
+    width: 428px;
   }
 }
 @media (max-width: 480px) {
@@ -101,7 +101,7 @@
   }
   .infocard {
     height: 550px;
-    width: 95%;
+    width: 305px;
   }
   .infotext {
     font-size: 16px;

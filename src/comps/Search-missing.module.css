@@ -181,7 +181,6 @@
 @media (max-width: 480px) {
   .formcontainer {
     width: 300px;
-    border:1px solid red
   }
   .formselect {
     width: 70px;
