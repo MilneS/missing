@@ -97,7 +97,6 @@ input:focus {
 @media (max-width: 1024px) {
   .addForm {
     width: 360px;
-       border:1px solid red
   }
 }
 @media (max-width: 768px) {
