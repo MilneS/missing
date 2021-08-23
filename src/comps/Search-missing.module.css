@@ -193,6 +193,9 @@
   .formbutton {
     width: 65px;
   }
+  .formbutton:hover{
+    padding-left: 2px;
+  }
   .divcardarea {
     width: 300px;
   }
