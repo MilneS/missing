@@ -33,6 +33,13 @@
     opacity: 1;
   }
 }
+.errmsg{
+  color: rgba(255, 0, 0, 0.76);
+  font-size: 15px;
+  margin: 0px;
+  font-style: italic;
+  position:relative
+}
 .inputs {
   font-family: Arial, Helvetica, sans-serif;
   height: 40px;

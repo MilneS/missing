@@ -30,6 +30,7 @@ const Login = (props) => {
     setEnteredData({ ...enteredData, [e.target.id]: e.target.value.trim() });
   };
 
+  const [wrongPw, setWrongPw] = useState(false);
   const formHandler = (e) => {
     e.preventDefault();
     if (
@@ -38,6 +39,8 @@ const Login = (props) => {
     ) {
       props.loggedinData(true);
       props.selectedBtn("add");
+    } else {
+      setWrongPw(true);
     }
   };
 
@@ -47,6 +50,7 @@ const Login = (props) => {
         <div>
           <p className={classes.formtitle}>Login</p>
         </div>
+        <div>{wrongPw && <p className={classes.errmsg}>Incorect login or password.</p>}</div>
         <div>
           {/* EMAIL */}
           <div>
