@@ -116,7 +116,11 @@ input:focus {
   .btn {
     margin-top: 5px;
     height: 30px;
-    width:80px
+    width:80px;
+    -webkit-padding-start: 9px;
+  }
+  .btn:hover {
+    -webkit-padding-start: 6px;
   }
   .formtitle {
     font-size: 15px;

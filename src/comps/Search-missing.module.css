@@ -119,24 +119,11 @@
   font-size: 40px;
 }
 
-
-/* @media not all and (min-resolution:.001dpcm) { 
-  @supports (-webkit-appearance:none) {
-    .formselect {
-      border:1px solid red;
-      border-radius: 0px;
-    }
-  }
-} */
-
-
 @media (max-width: 1000px) {
   .divcardarea {
     width: 500px;
   }
 }
-
-
 
 @media (max-width: 768px) {
   .formcontainer {
@@ -181,20 +168,34 @@
 @media (max-width: 480px) {
   .formcontainer {
     width: 300px;
+    -webkit-appearance: none;
+  align-items: center;
+  justify-content: center;
+
   }
   .formselect {
     width: 70px;
     padding-right: 4px;
+    height:39px;
+
   }
   .inputstyle {
     width: 90px;
+    height:34px;
     padding-right: 0px;
+    -webkit-border-radius: 0;
+    border-radius: 0px;
   }
   .formbutton {
     width: 65px;
+    height:39px;
+    -webkit-padding-start: 9px;
+
   }
   .formbutton:hover{
     padding-left: 2px;
+    -webkit-padding-start: 5px;
+
   }
   .divcardarea {
     width: 300px;
@@ -203,4 +204,5 @@
     width: 250px;
     font-size: 20px;
   }
+
 }

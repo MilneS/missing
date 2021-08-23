@@ -119,9 +119,15 @@ input:focus {
   .inputs {
     width: 200px;
     height: 30px;
+    -webkit-border-radius: 0;
+    border-radius: 0px;
   }
   .btn {
     height: 30px;
-    width:80px
+    width:80px;
+    -webkit-border-radius: 0;
+    border-radius: 0px;
+    -webkit-padding-start: 8px;
+    text-align:center;
   }
 }

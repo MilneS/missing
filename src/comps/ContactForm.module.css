@@ -50,7 +50,7 @@
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.719);
   letter-spacing: 1px;
-  background-color: #ffff
+  background-color: #ffff;
 }
 .btn:hover {
   border: 3px solid rgba(250, 189, 109, 0.945);
@@ -60,9 +60,9 @@
 }
 
 @media (max-width: 480px) {
-  .formcontainer{
+  .formcontainer {
     width: 210px;
-    height:fit-content;
+    height: fit-content;
   }
   .subtitle {
     font-size: 16px;
@@ -70,16 +70,24 @@
   .inputdiv,
   .textareadiv {
     width: 200px;
+    -webkit-border-radius: 0;
+    border-radius: 0px;
   }
-  .inputdiv{
+  .inputdiv {
     height: 30px;
   }
-  .textareadiv{
+  .textareadiv {
     height: 50px;
   }
   .btn {
     margin-top: 0px;
     height: 30px;
-    width:80px
+    width: 80px;
+    -webkit-border-radius: 0;
+    border-radius: 0px;
+    -webkit-padding-start: 9px;
+  }
+  .btn:hover {
+    -webkit-padding-start: 6px;
   }
 }
