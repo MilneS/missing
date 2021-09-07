@@ -2,15 +2,12 @@ import "./App.css";
 import Search from "././comps/Search-missing";
 import Navbar from "././comps/Navbar";
 import NewMissing from "./comps/New-missing";
-import Info from "./comps/Info";
-import Login from "./comps/Login";
 import { useState, useEffect } from "react";
 
 function App() {
   // fetch api
   const [persons, setPersons] = useState([]);
   const [selectedBtn, setSelectedBtn] = useState("search");
-  const [userLoggedin, setUserLoggedin] = useState(false);
 
   useEffect(() => {
     const fetchUser=async()=>{
@@ -42,9 +39,6 @@ function App() {
     console.log(data)
     setSelectedBtn(data);
   };
-  const userLoggedinFunc = (data) => {
-    setUserLoggedin(data);
-  };
   const addPeopleFunc = (data) => {
     setPersons([...persons, data]);
   };
@@ -55,8 +49,6 @@ function App() {
       <Navbar
         selectedBtnNav={selectedBtnFunc}
         selectedBtn={selectedBtn}
-        userLoggedin={userLoggedin}
-        userLoggedinFunc={userLoggedinFunc}
       />
       {selectedBtn === "search" && <Search people={persons} />}
       {selectedBtn === "add" && (
@@ -64,13 +56,6 @@ function App() {
           addPeopleFunc={addPeopleFunc}
           selectedBtn={selectedBtnFunc}
         />
-      )}
-      {selectedBtn === "info" && <Info />}
-      {selectedBtn === "login" && (
-        <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc} />
-      )}
-      {selectedBtn === "logout" && (
-        <Login loggedinData={userLoggedinFunc} selectedBtn={selectedBtnFunc} />
       )}
     </div>
   );
