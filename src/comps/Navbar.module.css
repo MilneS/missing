@@ -8,7 +8,6 @@
   height: 60px;
   padding: 0px;
   width: 100%;
-  padding-left: 50px;
 }
 
 .home,
@@ -31,10 +30,4 @@
 .active {
   font-weight: bold;
   color: rgba(255, 231, 199, 0.836);
-}
-
-@media (max-width: 480px) {
-  .containernav {
-    padding-left: 0px;
-  }
 }
